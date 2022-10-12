@@ -10,13 +10,20 @@ const images = [
     './assets/img/05.webp'
 ];
 
-//Selezioniamo il div dove vogliamo inserire le immagini
-const slidesEl = document.querySelector('.slides');
+
 
 //Crea un ciclo for con le immagini
-for (let i= 0; i < images.length; i++) {
+for (let i = 0; i < images.length; i++) {
     const imagesEl = images[i];
+    //Selezioniamo il div dove vogliamo inserire le immagini
+    const slidesEl = document.querySelector('.slides');
+    //Vado a selezionare il mio markup
+    const slidesMarkUp = '<img width="500" src="./assets/img/01.webp" alt=""> <img width="500" src="./assets/img/02.webp" alt=""> <img width="500" src="./assets/img/03.webp" alt=""> <img width="500" src="./assets/img/04.webp" alt=""> <img width="500" src="./assets/img/05.webp" alt="">'
+    //Stampo su console il markup
+    console.log(slidesMarkUp);
+    //Stampo su pagina il markup
+    slidesEl.insertAdjacentHTML('beforeend', slidesMarkUp);
     //Stampo su console tutte le immagini
-    console.log(imagesEl);
+    /* console.log(imagesEl); */
     
 }
